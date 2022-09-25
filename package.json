@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "tailwindcss -o ./tailwind.css --minify --watch",
-    "build": "NODE_ENV=PRODUCTION tailwindcss -o ./tailwind.css --minify"
+    "build-css": "NODE_ENV=PRODUCTION tailwindcss -o ./tailwind.css --minify",
+    "build": "npm build-css && trunk build --release"
   },
   "repository": {
     "type": "git",
